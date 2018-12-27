@@ -1,0 +1,1 @@
+qemu-system-x86_64 -enable-kvm -m 2048 -kernel binaries/bzImage -append "net.ifnames=0 console=ttyS0" -nographic -serial stdio -nodefaults -initrd binaries/rootfs.cpio.gz -net nic,model=virtio,macaddr=00:16:3e:00:01:01,netdev=nic-0 -netdev tap,id=nic-0,ifname=tap0
